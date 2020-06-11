@@ -145,7 +145,7 @@ img.add_border {
                             <li><a href="./../blog/index.html">blog</a></li>
                         </ul>
                       </li>
-                     <li><a href='About.html'>About</a><li class='has-children'><a href='group1.html'>group1</a><ul class='dropdown'><li><a href='40723242.html'>40723242</a><li><a href='40723229.html'>40723229</a><li><a href='40723206.html'>40723206</a></li></ul><li class='has-children'><a href='group2.html'>group2</a><ul class='dropdown'><li><a href='40732321.html'>40732321</a><li><a href='40723222.html'>40723222</a><li><a href='40723228.html'>40723228</a></li></ul><li class='has-children'><a href='group3.html'>group3</a><ul class='dropdown'><li><a href='40723205-1.html'>40723205-1</a><li><a href='40723121.html'>40723121</a><li><a href='40723205-2.html'>40723205-2</a></li></ul><li class='has-children'><a href='group4.html'>group4</a><ul class='dropdown'><li><a href='40723245.html'>40723245</a><li><a href='40723210.html'>40723210</a><li><a href='40723238.html'>40723238</a></li>
+                     <li><a href='About.html'>About</a><li class='has-children'><a href='group1.html'>group1</a><ul class='dropdown'><li><a href='40723242.html'>40723242</a><li><a href='40723229.html'>40723229</a><li><a href='40723206.html'>40723206</a></li></ul><li class='has-children'><a href='group2.html'>group2</a><ul class='dropdown'><li><a href='40732321.html'>40732321</a><li><a href='40723222.html'>40723222</a><li><a href='40723228.html'>40723228</a></li></ul><li class='has-children'><a href='group3.html'>group3</a><ul class='dropdown'><li><a href='40723205.html'>40723205</a><li><a href='40723121.html'>40723121</a><li><a href='40723203.html'>40723203</a></li></ul><li class='has-children'><a href='group4.html'>group4</a><ul class='dropdown'><li><a href='40723245.html'>40723245</a><li><a href='40723210.html'>40723210</a><li><a href='40723238.html'>40723238</a></li>
                       </ul>
                 </nav>
               </div>
@@ -156,8 +156,44 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">group3 << <a href='group3.html'>Previous</a> <a href='40723121.html'>Next</a> >> 40723121<br /><h1>40723205-1</h1>
-<p><strong></strong></p>
+    <div id="tipue_search_content">group3 << <a href='group3.html'>Previous</a> <a href='40723121.html'>Next</a> >> 40723121<br /><h1>40723205</h1>
+<p>IPV6下伺服器連線設定</p>
+<p>在老師倉儲下的downloads開啟w13_ipv6_assignment.txt。</p>
+<p>設定IPv6網路，IPv6位址輸入2001:288:6004:17:2020:2::7205(2=乙班、7227=乙班5號)。</p>
+<p><img alt="" height="512" src="./../images/12.png" width="624"/></p>
+<p>預設匝道輸入2001:288:6006:17::254。</p>
+<p>設定整體系統埠號，將主機IP改為個人IP。</p>
+<p>開啟Ubuntu輸入密碼kmol2020。</p>
+<p>開啟LXTermial再到cd2020pj1。</p>
+<p>要記得git pull檢查有無更新版本，cd docs/cmsimde。</p>
+<p>輸入vi wsgi.py，將host改為個人主機IP按i編輯，按Esc輸入:wq存儲。</p>
+<p>開啟putty。</p>
+<p>設定SSH下的X11。</p>
+<p>Enable X11 fowarding打勾並在X display location中輸入localhost:0.0。</p>
+<p>設定完成後存儲。</p>
+<p>輸入帳密kmol2020，打開XLaunch.exe並輸入xterm&amp;啟動。</p>
+<p>進入tmp/cd2020pj1/docs/cmsimde，輸入python3 wsgi.py開啟。</p>
+<p>網址為[該主機IP]:17443要關閉proxy。</p>
+<p>這樣就完成了。</p>
+<p> </p>
+<p>.IPv4 Ubuntu對外連線設定操作</p>
+<p>點選檔案-喜好設定-網路-新增一個NAT網路。</p>
+<p>編輯NAT網路-連接埠轉送-新增4個新的連接埠轉送埠號。</p>
+<p>設定主機IP為127.0.0.1；客體IP為10.0.2.4；主機連接埠為22、19999、17443、18443；客體連接埠為22、19999、7443、8443。</p>
+<p>設定-網路-設定主機網路為NAT Network。</p>
+<p>啟動，接著輸入密碼kmol2020。</p>
+<p>開啟LXTermial，輸入ifconfig之後再輸入sudo apt install net-tools再輸入密碼kmol2020。</p>
+<p>cd tmp-&gt;ls-輸入ping 127.0.0.1測試-cd cd2020pj1-git pull。</p>
+<p>打sudo vi wsgi.py編輯內容，按i進行編輯。</p>
+<p>近端的host改為10.0.2.4，按Esc並輸入:wq存儲。</p>
+<p>開啟leo和cd2020pj1.leo，點選Nav搜尋allowExt。</p>
+<p>點開fileuploadfrom，並將第10行新增一個ttt檔，之後存儲並關閉leo。</p>
+<p>接著在tmp下新增oauth_scrum.txt，並輸入sudo vi oauth_scrum.txt。按i編輯，隨便輸入即可，接著按Esc並輸入:wq存儲。</p>
+<p>cd cd2020pj1，並輸入python3 wsgi.py啟動。</p>
+<p>網址為https:/127.0.0.1:18443/alogin。</p>
+<p>帳號及密碼都為admin，進入後點選fileuploadform，選擇要上傳的ttt檔。</p>
+<p>點選download list檢查檔案是否上傳完成。</p>
+<p><strong>這樣就完成了。</strong></p>
 <br />group3 << <a href='group3.html'>Previous</a> <a href='40723121.html'>Next</a> >> 40723121</div>
         
     <!-- footer -->
