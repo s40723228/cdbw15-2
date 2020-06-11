@@ -212,6 +212,14 @@
 <h2>40723222</h2>
 <p>IPv6 Ubuntu 設定<br/>打開 Oracle VM VirtualBox 點選 File 下的 Preferences...<br/>點選 Network 打開設定<br/>勾選 Supports IPv6 和 Advertise Default IPv6 Rpute<br/>點選 Settings 裡面的 Network 將 Attached to : 後的選單選取 NAT Network<br/>開啟主機 密碼為 kmol2020 ，開啟 LXTermial<br/>輸入 cd etc<br/> cd apt<br/> cd apt.config.d<br/> sudo vi proxy.conf (密碼為 kmol2020)<br/>點選 i 進行編輯<br/>輸入 Acquire::http::Proxy "http://[2001:288:6004:17::53]:3128";<br/>案 ESC 並輸入 :wq 進行存檔<br/>輸入 sudo apt update 更新 apt<br/>輸入 ifconfig<br/> sudo apt install net-tools<br/> cd ..<br/> cd ..<br/> cd netplan<br/> sudo vi 00-installer-config.yaml<br/>編輯如下並存檔<br/><img alt="" height="548" src="/images/ipv6-1.jpg" width="635"/><br/>輸入 ping6 2001:288:6004:17::254 測試是否能連線<br/>切換 Oracle VM VirtualBox 打開 File 下的 Preferences...<br/>打開 Network 設定<br/>點選 PortForwarding<br/>將 IPv4 和 IPv6 設定如下並儲存<br/><img alt="" height="510" src="/images/ipv6-2.jpg" width="481"/><br/><img alt="" height="519" src="/images/ipv6-3.jpg" width="495"/><br/>切換回 Ubuntu<br/>輸入 cd <br/> cd tmp<br/> sudo vi oauth_scrum.txt<br/>輸入 google api 密碼並儲存<br/> cd cd2020pj1<br/> sudo vi wsgi.py<br/>將 host 改為 fd17:625c:f037:2:a00:27ff:fef6:9b8a 並儲存<br/> python3 wsgi.py 啟動<br/>即可以打開網址https://[自己ip]:18443/alogin</p>
 <h2>40723228</h2>
+<p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/kak4z8o3bGo" width="560"></iframe></p>
+<p>1.下載filezilla - <a href="https://portableapps.com/apps/internet/filezilla_portable">https://portableapps.com/apps/internet/filezilla_portable</a>安裝它</p>
+<p>2.設定putty    ps.X11的設定是localhost:0.0</p>
+<p>3.開啟剛剛設定的 putty  帳密都是kmol2020</p>
+<p>4.開filezilla</p>
+<p>5.檔案-&gt;站台管理員-&gt;新建一個站台</p>
+<p>6.設定它，協定記得改成ssh那個</p>
+<p>7.連線 完工</p>
 <h1>group3</h1>
 <h2>40723205</h2>
 <p>IPV6下伺服器連線設定</p>
@@ -295,7 +303,8 @@
 <p>在第一部影片在最後碰到了Mako error的問題，原因是虛擬主機的版本是舊版的，需要更新，要輸入pip3 install mako==1.1.3更新到1.1.3的版本才可以使用，登入進去碰到授權失敗的問題是google的問題，解決後即可使用</p>
 <p><a href="https://youtu.be/6bWKP8PWglI"><span>以下是我的操作影片-2:</span>https://youtu.be/6bWKP8PWglI</a></p>
 <p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/6bWKP8PWglI" width="560"></iframe></p>
-<p></p><h2>40723210</h2>
+<p></p>
+<h2>40723210</h2>
 <h4>IPv6 Ubuntu 對外連線設定(請在學校使用)</h4>
 <p>必須要先了解<a href="https://s40723210.github.io/cd2020/content/Linux%20%E6%8C%87%E4%BB%A4.html">Linux</a>的輸入法，以及<a href="https://s40723210.github.io/cd2020/content/vi%20%E8%88%87%20vim%20%E7%9A%84%E6%8C%87%E4%BB%A4%E6%95%B4%E7%90%86.html">vi與vim</a>的指令<br/><br/>1.在VirtualBox先勾選2個IPv6選項，主機網路為NAT Network<br/><br/>2.主機密碼:kmol2020，開啟LXTermial，輸入cd /etc<br/><span>sudo為</span><span><span>使用特殊的權限執行程式。vi為編輯內容</span><br/></span>3.cd apt &gt; cd apt.conf.d &gt; <span>sudo vi proxy.conf <br/><br/></span>4.密碼為kmol2020，按i來編輯，輸入proxy設定內容如下</p>
 <pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">Acquire::http::Proxy "http://[2001:288:6004:17::53]:3128";</pre>
@@ -362,7 +371,8 @@
 <p><span><strong><img alt="" height="263" src="https://s40723210.github.io/cd2020/images/mako%20erro.PNG" width="503"/></strong></span></p>
 <p><span><strong>9.使用python3 wsgi.py時，出現key的錯誤</strong></span></p>
 <p><span>在tmp下的oauth_scrum.txt，內容必須至少要有兩行，使用sudo vi oauth_scrum.txt來進行編輯，只有一段的話會出現錯誤</span></p>
-<p><span><strong><img alt="" height="132" src="https://s40723210.github.io/cd2020/images/key1.PNG" width="509"/></strong></span></p><h2>40723238</h2>
+<p><span><strong><img alt="" height="132" src="https://s40723210.github.io/cd2020/images/key1.PNG" width="509"/></strong></span></p>
+<h2>40723238</h2>
 <p>ipv6遠端控制伺服</p>
 <p>1.將控制台設定跟<a href="https://github.com/mdecourse/cd2020/blob/master/downloads/w13_ipv6_assignment.txt">老師</a>一樣</p>
 <p>2.將虛擬主機全域埠號改成跟影片一樣</p>
