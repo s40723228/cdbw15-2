@@ -288,7 +288,14 @@
 <p>密碼為kmol2020</p>
 <h1>group4</h1>
 <h2>40723245</h2>
-<h2>40723210</h2>
+<p><big>Ipv4 Ubuntu對外連線設定</big></p>
+<p>操作步驟:<br/>1.點選檔案-&gt;喜好設定-&gt;網路-&gt;新增一個新的NAT網路。<br/>2.編輯NAT網路-&gt;點選連接埠轉送-&gt;新增4個新的連接埠轉送埠號。<br/>3.設定主機IP為127.0.0.1；客體IP為10.0.2.4；主機連接埠為22、19999、17443、18443；客體連接埠為22、19999、7443、8443。<br/>4.點選設定-&gt;網路-&gt;設定主機網路為NAT Network。<br/>5.設定完後，點選啟動，接著輸入密碼kmol2020。<br/>6.開啟LXTermial，輸入ifconfig-&gt;輸入sudo apt install net-tools-&gt;輸入密碼kmol2020。<br/>7.cd tmp-&gt;ls-&gt;輸入ping 127.0.0.1測試-&gt;cd cd2020pj1-&gt;git pull。<br/>8.接著輸入sudo vi wsgi.py編輯內容，按i進行編輯。<br/>9.將近端的host改為10.0.2.4，接著按Esc並輸入:wq存儲。<br/>10.開啟leo，並開啟cd2020pj1.leo，點選Nav搜尋allowExt。<br/>11.點選fileuploadfrom，並將第10行新增一個ttt檔，完成後存儲並關閉leo。<br/>12.cd..,接著在tmp下新增oauth_scrum.txt，輸入sudo vi oauth_scrum.txt。<br/>13.按i編輯，內容先隨便輸入，接著按Esc並輸入:wq存儲。<br/>14.cd cd2020pj1，並輸入python3 wsgi.py啟動。<br/>15.網址為https:/127.0.0.1:18443/alogin。<br/>16.帳號及密碼都為admin，進入後點選fileuploadform，點選要上傳的ttt檔。<br/>17.點選download list檢查檔案是否上傳完成。<br/>18.完成。</p>
+<p>以下是我的操作影片-1:<a href="https://youtu.be/8FuFv1jFpMY">https://youtu.be/8FuFv1jFpMY</a>、</p>
+<p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/8FuFv1jFpMY" width="560"></iframe></p>
+<p>在第一部影片在最後碰到了Mako error的問題，原因是虛擬主機的版本是舊版的，需要更新，要輸入pip3 install mako==1.1.3更新到1.1.3的版本才可以使用，登入進去碰到授權失敗的問題是google的問題，解決後即可使用</p>
+<p><a href="https://youtu.be/6bWKP8PWglI"><span>以下是我的操作影片-2:</span>https://youtu.be/6bWKP8PWglI</a></p>
+<p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/6bWKP8PWglI" width="560"></iframe></p>
+<p></p><h2>40723210</h2>
 <h4>IPv6 Ubuntu 對外連線設定(請在學校使用)</h4>
 <p>必須要先了解<a href="https://s40723210.github.io/cd2020/content/Linux%20%E6%8C%87%E4%BB%A4.html">Linux</a>的輸入法，以及<a href="https://s40723210.github.io/cd2020/content/vi%20%E8%88%87%20vim%20%E7%9A%84%E6%8C%87%E4%BB%A4%E6%95%B4%E7%90%86.html">vi與vim</a>的指令<br/><br/>1.在VirtualBox先勾選2個IPv6選項，主機網路為NAT Network<br/><br/>2.主機密碼:kmol2020，開啟LXTermial，輸入cd /etc<br/><span>sudo為</span><span><span>使用特殊的權限執行程式。vi為編輯內容</span><br/></span>3.cd apt &gt; cd apt.conf.d &gt; <span>sudo vi proxy.conf <br/><br/></span>4.密碼為kmol2020，按i來編輯，輸入proxy設定內容如下</p>
 <pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">Acquire::http::Proxy "http://[2001:288:6004:17::53]:3128";</pre>
