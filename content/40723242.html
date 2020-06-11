@@ -157,6 +157,91 @@ img.add_border {
           
         </header>
     <div id="tipue_search_content">group1 << <a href='group1.html'>Previous</a> <a href='40723229.html'>Next</a> >> 40723229<br /><h1>40723242</h1>
+<p><span><strong>IPv4 Ubuntu對外連線設定操作:</strong></span></p>
+<p><strong>操作步驟:</strong></p>
+<ol>
+<li>喜好設定-&gt;網路-&gt;新增一個新的NAT網路</li>
+<li>編輯NAT網路，新增4個連接埠轉送埠號</li>
+<li>設定主機IP為0.0.1，主機連接埠號為 22、19999、17443、18443，客體IP為10.0.2.4，客體連接埠號為22、19999、17443、18443</li>
+<li>點選設定&gt;網路&gt;設定為NAT Network</li>
+<li>點選啟動，接著輸入密碼kmol2020</li>
+<li>開啟LXTermial，輸入ifconfig&gt; sudo apt install net-tools&gt;密碼kmol2020</li>
+<li>cd tmp&gt;ls&gt;ping 127.0.0.1測試&gt;cd cd2020pj1&gt;git pull</li>
+<li>sudo vi wsgi.py編輯內容，將Host改成0.2.4</li>
+<li>開啟leo，開啟cd cd2020pj1點NAV尋找allowExt</li>
+<li>點選fileuploadfrom，在第10行新增一個ttt檔，存儲</li>
+<li>cd..，在tmp下新增oauth_scrum.txt並輸入sudo vi oauth_scrum.txt，儲存</li>
+<li>cd cd2020pj1&gt;python3 wsgi.py</li>
+<li>網址為https:/127.0.0.1:18443/alogin</li>
+<li>帳號及密碼都為admin，進入後點選fileuploadform，點選要上傳的ttt</li>
+<li>15.選download list檢查是否上傳完成</li>
+</ol>
+<p><strong>IPv4<span> </span></strong><strong>遠端控制設定</strong></p>
+<p><strong>操作步驟</strong>:</p>
+<ol>
+<li><strong></strong>在<span>cmd</span>命令窗輸入<span>ipconfig</span>查<span>IPV4 IP</span></li>
+<li><strong></strong>將虛擬主機的主機<span>IP</span>改為個人<span>IPV4 IP</span></li>
+<li><strong></strong>啟動<span>Ubuntu</span>開啟<span>exe</span></li>
+<li><strong></strong>開啟<span>putty</span>，並設定<span>IPV4 IP</span></li>
+<li><strong></strong>設定<span>SSH</span>下的<span>X11</span>，將<span>Enable X11 fowarding</span>打勾並在下面對話窗中輸入<span>localhost:0.0</span></li>
+<li><strong></strong>存儲後再啟動即可連線，輸入<span>kmol2020</span></li>
+<li><strong></strong>輸入<span>xterm&amp;</span>，<span>cd cd2020pj1&gt;git pull&gt;cd docs/cmsimde&gt;vi wsgi.py&gt;</span>更改<span>host</span>改為<span>0.2.4</span>，儲存</li>
+<li><strong></strong>輸入<span>python3 wsgi.py</span>，網址為該主機<span>IP</span>加上<span>17443(<a href="https://xn--ip-wz2c812i:17443/">https://<span><span>主機IP:17443</span></span></a></span><span><span><span></span></span></span></li>
+</ol>
+<hr/>
+<p><strong>IPv6<span> </span></strong><strong>遠端控制設定</strong></p>
+<p><span color="#0000ff"><b>更改內容:</b></span></p>
+<div>
+<div class="syntaxhighlighter py" id="highlighter_359227">
+<table border="0" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td class="gutter">
+<div class="line number1 index0 alt2">1</div>
+<div class="line number2 index1 alt1">2</div>
+<div class="line number3 index2 alt2">3</div>
+<div class="line number4 index3 alt1">4</div>
+<div class="line number5 index4 alt2">5</div>
+<div class="line number6 index5 alt1">6</div>
+<div class="line number7 index6 alt2">7</div>
+<div class="line number8 index7 alt1">8</div>
+<div class="line number9 index8 alt2">9</div>
+</td>
+<td class="code">
+<div class="container">
+<div class="line number1 index0 alt2"><code class="py plain">network:</code></div>
+<div class="line number2 index1 alt1"><code class="py spaces">    </code><code class="py plain">ethernets:</code></div>
+<div class="line number3 index2 alt2"><code class="py spaces">        </code><code class="py plain">enp0s3:</code></div>
+<div class="line number4 index3 alt1"><code class="py spaces">           </code><code class="py plain">dhcp4: true</code></div>
+<div class="line number5 index4 alt2"><code class="py spaces">           </code><code class="py plain">dhcp6: true</code></div>
+<div class="line number6 index5 alt1"><code class="py spaces">           </code><code class="py plain">nameservers:</code></div>
+<div class="line number7 index6 alt2"><code class="py spaces">               </code><code class="py plain">addresses:</code></div>
+<div class="line number8 index7 alt1"><code class="py spaces">                  </code><code class="py keyword">-</code> <code class="py value">2001</code><code class="py plain">:b000:</code><code class="py value">168</code><code class="py plain">::</code><code class="py value">11</code> </div>
+<div class="line number9 index8 alt2"><code class="py spaces">  </code><code class="py plain">version: </code><code class="py value">2</code></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><strong>操作步驟:</strong></p>
+<p>1.點選IPv6內容，IPv6位址輸入2001:288:6004:17:2020:2::7242(2為乙班、7227為乙班42號)<br/>2.子網路首碼輸入64、預設匝道輸入2001:288:6006:17::254<br/>3.開啟虛擬主機，設定系統埠號，將主機IP改為個人IP<br/>4.啟動Ubuntu輸入密碼kmol2020<br/>5.開啟LXTermial，並進入cd2020pj1<br/>6.git pull檢查版本更新，cd docs/cmsimde<br/>7.輸入vi wsgi.py，將host改為個人主機IP</p>
+<p>8.在另一台主機開啟putty，輸入預連線主機IP<br/>9.設定SSH下的X11，設定完成後存儲，在打開即可連線該主機<br/>10.輸入帳密kmol2020，打開XLaunch.exe並輸入xterm&amp;啟動<br/>11.進入tmp/cd2020pj1/docs/cmsimde，輸入python3 wsgi.py開啟遠端<br/>12.網址為[該主機IP]:17443<br/>13.完成遠端控制</p>
+<hr/>
+<p><strong>FileZilla<span> </span></strong><strong>虛擬主機文件共享設定</strong></p>
+<p><strong>操作步驟</strong>:</p>
+<p>1.下載FileZilla</p>
+<p>2.確認虛擬主機的IP後啟動</p>
+<p>3.開啟putty，設定個人主機IP</p>
+<p>4.設定SSH中的X11，打勾並輸入localhost:0.0存儲後開啟</p>
+<p>5.輸入kmol2020</p>
+<p>6.開啟FileZilla，點選檔案-&gt;站台管理員-&gt;新增站台</p>
+<p>7.更改為 SFTP-SSH，輸入個人主機IP及22</p>
+<p>8.更改為詢問密碼、命名為kmol2020，密碼輸入kmol2020</p>
+<p>9.完成文件共享設定</p>
+<p><span color="#0000ff"><b>影片:</b></span></p>
+<p><span color="#0000ff"><b><iframe allowfullscreen="allowfullscreen" data-mce-fragment="1" height="314" src="https://www.youtube.com/embed/RwPHyCRLU8U" width="560"></iframe></b></span></p>
 <br />group1 << <a href='group1.html'>Previous</a> <a href='40723229.html'>Next</a> >> 40723229</div>
         
     <!-- footer -->
