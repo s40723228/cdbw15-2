@@ -157,6 +157,7 @@ img.add_border {
           
         </header>
     <div id="tipue_search_content">40732321 << <a href='40732321.html'>Previous</a> <a href='40723228.html'>Next</a> >> 40723228<br /><h1>40723222</h1>
+<p>IPv6 Ubuntu 設定<br/>打開 Oracle VM VirtualBox 點選 File 下的 Preferences...<br/>點選 Network 打開設定<br/>勾選 Supports IPv6 和 Advertise Default IPv6 Rpute<br/>點選 Settings 裡面的 Network 將 Attached to : 後的選單選取 NAT Network<br/>開啟主機 密碼為 kmol2020 ，開啟 LXTermial<br/>輸入 cd etc<br/> cd apt<br/> cd apt.config.d<br/> sudo vi proxy.conf (密碼為 kmol2020)<br/>點選 i 進行編輯<br/>輸入 Acquire::http::Proxy "http://[2001:288:6004:17::53]:3128";<br/>案 ESC 並輸入 :wq 進行存檔<br/>輸入 sudo apt update 更新 apt<br/>輸入 ifconfig<br/> sudo apt install net-tools<br/> cd ..<br/> cd ..<br/> cd netplan<br/> sudo vi 00-installer-config.yaml<br/>編輯如下並存檔<br/><img alt="" height="548" src="./../images/ipv6-1.jpg" width="635"/><br/>輸入 ping6 2001:288:6004:17::254 測試是否能連線<br/>切換 Oracle VM VirtualBox 打開 File 下的 Preferences...<br/>打開 Network 設定<br/>點選 PortForwarding<br/>將 IPv4 和 IPv6 設定如下並儲存<br/><img alt="" height="510" src="./../images/ipv6-2.jpg" width="481"/><br/><img alt="" height="519" src="./../images/ipv6-3.jpg" width="495"/><br/>切換回 Ubuntu<br/>輸入 cd <br/> cd tmp<br/> sudo vi oauth_scrum.txt<br/>輸入 google api 密碼並儲存<br/> cd cd2020pj1<br/> sudo vi wsgi.py<br/>將 host 改為 fd17:625c:f037:2:a00:27ff:fef6:9b8a 並儲存<br/> python3 wsgi.py 啟動<br/>即可以打開網址https://[自己ip]:18443/alogin</p>
 <br />40732321 << <a href='40732321.html'>Previous</a> <a href='40723228.html'>Next</a> >> 40723228</div>
         
     <!-- footer -->
