@@ -9,7 +9,69 @@
 <h2>40723242</h2>
 <h2>40723229</h2>
 <h2>40723206</h2>
-<h1>group2</h1>
+<p><strong>Ubnutu對外連線-IPV4</strong></p>
+<p>1.選擇主機網路<span>NAT Network</span>，新增埠號如下圖所示<span>:</span></p>
+<p><span><img alt="" height="202" src="/images/23.png" width="584"/></span></p>
+<p>2.登入密碼一樣是<span>kmol2020</span></p>
+<p>3.打開<span>LXTermial</span>輸入<span>ifconfig&gt;sudo apt install net-tools</span>輸入密碼也是<span>kmol2020</span></p>
+<p>4.輸入<span>ping6 127.0.0.1</span>測試是否可執行</p>
+<p>5.進入<span>cd2020pj1</span>資料夾然後<span>git pull</span></p>
+<p>6.輸入<span>sudo vi wsgi.py</span>並且按下<span>i</span>編輯內容將<span>’host=127.0.0.1’</span>編輯設置為10.0.2.4</p>
+<p>7.按下<span>esc</span>並且輸入<span>:wq</span>來存取，開啟<span>cd2020pj1.leo</span></p>
+<p>8.用<span>nav</span>尋找<span>allowExt</span>檔案位置並且新增<span>ttt</span>檔案</p>
+<p>9.在<span>tmp</span>下輸入<span>sudo vi oauth_scrum.txt</span>再輸入<span>python3 wsgi.py</span>開啟遠端</p>
+<p>10.進入<span>https://127.0.0.1:18443/alogin</span>測試是否可以上傳<span>ttt</span>檔案</p>
+<p>※ <span>sudo</span>為使用特殊的權限執行的程式。<span>vi</span>為編輯內容</p>
+<p>※<span> ifconfig</span>為網卡信息的各項說</p>
+<p> </p>
+<p><span style="color: #ff0000;"> *更新問題:</span></p>
+<p>1.因為老師有將<span>cd2020pj1</span>更新，所以我們從虛擬主機下開啟<span>python3 wsgi.py</span>之模組有缺少問題</p>
+<p><span style="color: #ff0000;">解決</span><span>:</span> pip3 install pydrive安裝此模組</p>
+<p>2.mako系統版本沒有更新，導致遠端連線出現問題</p>
+<p><span style="color: #ff0000;">解決</span><span>:</span> 輸入<span>”sudo pip3 install mako==1.1.3”</span>更新版本<span>1.1.3</span></p>
+<p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/YAGirfh8vLM" width="560"></iframe></p>
+<p> </p>
+<p><strong>Ubnutu對外連線-IPV6 (須在學校操作)</strong></p>
+<p>1.選擇主機網路<span>NAT Network</span>設定<span>IPV6</span></p>
+<p>2.打開<span>LXTermial</span>並且輸入<span>cd /etc</span></p>
+<p>3.按照路徑進入<span>cd apt &gt; cd apt.conf.d &gt; sudo vi proxy.conf</span></p>
+<p>5.密碼<span>kmol2020</span>並且一樣按<span>i</span>鍵進入編輯模式</p>
+<p>6.輸入<span>Acquire::http::proxy "http://[2001:288:6004:17::53]:3128";</span></p>
+<p>7.按<span>esc</span>並且使用<span>:wq</span>來儲存，再用<span>sudo apt update apt</span>更新<span>apt</span></p>
+<p>8.ifconfig&gt;sudo apt install net-tools，<span>cd etc/netplan</span></p>
+<p>9.輸入<span>sudo vi 00-installer-config.yaml</span>並且按照以下方式更改縮排</p>
+<table width="1110">
+<tbody>
+<tr>
+<td>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+</td>
+<td width="1074">
+<p>network:</p>
+<p>  ethernets:</p>
+<p>    enp0s3:</p>
+<p>        dhcp4: true</p>
+<p>        dhcp6: true</p>
+<p>        nameservers:</p>
+<p>            addresses:</p>
+<p>                - 2001:b000:168::1</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>10.輸入<span>ping6 2001:288:6004:17::254</span>測試是否可以連線</p>
+<p>11.新增<span>4</span>個埠號<img alt="" height="202" src="/images/23.png" width="584"/></p>
+<p>12.輸入<span>ifconfig </span>來查詢在<span>IPV6</span>的<span>ip</span></p>
+<p>13.進入<span>cd2020pj1</span>資料夾執行<span>git config --global --add http.proxy[2001:288:6004:17::53]:3128</span></p>
+<p>13.輸入<span>sudo vi wsgi.py wsgi.py</span>將近端的<span>host</span>更改成<span>::</span>，再輸入<span>python3 wsgi.py</span></p>
+<p>15.用平常開啟近端的方式<span>https://[::1]:18443/alogin</span></p>
+<p>16.打開<span>leo</span>新增<span>ttt</span>檔案的上傳設定測試是否可以上傳</p>
+<p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/F6WS62TluOs" width="560"></iframe></p><h1>group2</h1>
 <h2>40732321</h2>
 <h4><span><strong>IPV6下伺服器連線設定</strong></span></h4>
 <p><span><span>1.</span></span>先設定好網路連線下的host ip( ip的設定方式可以在cd2020pj1倉儲下的downaloads中找到)</p>
